@@ -14,6 +14,7 @@
 		F033AA0E202C68060025808F /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033AA0D202C68060025808F /* ChatVC.swift */; };
 		F033AA10202C681A0025808F /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033AA0F202C681A0025808F /* ChannelVC.swift */; };
 		F033AA13202C71F60025808F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F033AA09202C62680025808F /* SWRevealViewController.m */; };
+		F033AA15202C78200025808F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033AA14202C78200025808F /* GradientView.swift */; };
 		FF10F7534F52CC7353056714 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A913301826383290CFEA779 /* Pods_Smack.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		F033AA09202C62680025808F /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		F033AA0D202C68060025808F /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		F033AA0F202C681A0025808F /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		F033AA14202C78200025808F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		F033AA0C202C67D60025808F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F033AA14202C78200025808F /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				F033AA13202C71F60025808F /* SWRevealViewController.m in Sources */,
 				F033AA0E202C68060025808F /* ChatVC.swift in Sources */,
+				F033AA15202C78200025808F /* GradientView.swift in Sources */,
 				F033AA10202C681A0025808F /* ChannelVC.swift in Sources */,
 				F030FDA4201A995E0000C042 /* AppDelegate.swift in Sources */,
 			);
