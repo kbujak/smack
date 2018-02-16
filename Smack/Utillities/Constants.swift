@@ -9,3 +9,5 @@
 import Foundation
 
 let TO_LOGIN = "toLogin"
+let TO_CREATE_ACCOUNT = "toCreateAcount"
+let UNWIND_TO_CHANNEL = "unwindToChannel"

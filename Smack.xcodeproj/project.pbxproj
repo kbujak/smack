@@ -17,6 +17,8 @@
 		F033AA15202C78200025808F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033AA14202C78200025808F /* GradientView.swift */; };
 		F033AA19202C8B4B0025808F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033AA18202C8B4B0025808F /* Constants.swift */; };
 		F033AA1B202C998C0025808F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033AA1A202C998C0025808F /* LoginVC.swift */; };
+		F06E6ACB203390FD0004EF90 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06E6ACA203390FD0004EF90 /* CreateAccountVC.swift */; };
+		F06E6ACD203397500004EF90 /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06E6ACC203397500004EF90 /* SegueIdentifiers.swift */; };
 		FF10F7534F52CC7353056714 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A913301826383290CFEA779 /* Pods_Smack.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		F033AA14202C78200025808F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F033AA18202C8B4B0025808F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F033AA1A202C998C0025808F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F06E6ACA203390FD0004EF90 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		F06E6ACC203397500004EF90 /* SegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 				F033AA0D202C68060025808F /* ChatVC.swift */,
 				F033AA0F202C681A0025808F /* ChannelVC.swift */,
 				F033AA1A202C998C0025808F /* LoginVC.swift */,
+				F06E6ACA203390FD0004EF90 /* CreateAccountVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				F033AA18202C8B4B0025808F /* Constants.swift */,
+				F06E6ACC203397500004EF90 /* SegueIdentifiers.swift */,
 			);
 			path = Utillities;
 			sourceTree = "<group>";
@@ -285,9 +291,11 @@
 			files = (
 				F033AA1B202C998C0025808F /* LoginVC.swift in Sources */,
 				F033AA13202C71F60025808F /* SWRevealViewController.m in Sources */,
+				F06E6ACB203390FD0004EF90 /* CreateAccountVC.swift in Sources */,
 				F033AA0E202C68060025808F /* ChatVC.swift in Sources */,
 				F033AA15202C78200025808F /* GradientView.swift in Sources */,
 				F033AA10202C681A0025808F /* ChannelVC.swift in Sources */,
+				F06E6ACD203397500004EF90 /* SegueIdentifiers.swift in Sources */,
 				F030FDA4201A995E0000C042 /* AppDelegate.swift in Sources */,
 				F033AA19202C8B4B0025808F /* Constants.swift in Sources */,
 			);
