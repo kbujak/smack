@@ -8,6 +8,19 @@
 
 import Foundation
 
+typealias CompletionHandler = (_ Success: Bool) -> ()
+
+
+let BASE_URL = "https://booyacchat.herokuapp.com/v1/"
+let REGISTER_URL = "\(BASE_URL)account/register"
+
+// Segue identifiers
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAcount"
 let UNWIND_TO_CHANNEL = "unwindToChannel"
+
+// User Defaults
+let TOKEN_KEY = "token"
+let LOGGED_IN_KEY = "loggedIn"
+let USER_EMAIL_KEY = "userEmail"
+

@@ -15,6 +15,6 @@ class CreateAccountVC: UIViewController {
     }
     
     @IBAction func dissmissPressed(_ sender: Any) {
-        performSegue(withIdentifier: SegueIdentifier.UNWIND_TO_CHANNEL.rawValue, sender: self)
+        performSegue(withIdentifier: UNWIND_TO_CHANNEL, sender: self)
     }
 }
