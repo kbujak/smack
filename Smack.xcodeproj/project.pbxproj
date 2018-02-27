@@ -19,6 +19,7 @@
 		F033AA1B202C998C0025808F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F033AA1A202C998C0025808F /* LoginVC.swift */; };
 		F05D7B1B203C37B80083734C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05D7B1A203C37B80083734C /* AuthService.swift */; };
 		F06E6ACB203390FD0004EF90 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06E6ACA203390FD0004EF90 /* CreateAccountVC.swift */; };
+		F0D8DC41204458F0007B83A1 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D8DC40204458F0007B83A1 /* RoundedButton.swift */; };
 		FF10F7534F52CC7353056714 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A913301826383290CFEA779 /* Pods_Smack.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		F033AA1A202C998C0025808F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F05D7B1A203C37B80083734C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F06E6ACA203390FD0004EF90 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		F0D8DC40204458F0007B83A1 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				F033AA14202C78200025808F /* GradientView.swift */,
+				F0D8DC40204458F0007B83A1 /* RoundedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F033AA1B202C998C0025808F /* LoginVC.swift in Sources */,
+				F0D8DC41204458F0007B83A1 /* RoundedButton.swift in Sources */,
 				F033AA13202C71F60025808F /* SWRevealViewController.m in Sources */,
 				F06E6ACB203390FD0004EF90 /* CreateAccountVC.swift in Sources */,
 				F033AA0E202C68060025808F /* ChatVC.swift in Sources */,
