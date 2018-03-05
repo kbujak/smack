@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class AuthService{
     
@@ -15,7 +16,7 @@ class AuthService{
     
     let defaults = UserDefaults.standard
     
-    var isLoggedIn: Bool{
+    internal var isLoggedIn: Bool{
         get{
             return defaults.bool(forKey: LOGGED_IN_KEY)
         }
@@ -24,7 +25,7 @@ class AuthService{
         }
     }
     
-    var authToken: String{
+    internal var authToken: String{
         get{            
             return defaults.object(forKey: TOKEN_KEY) as! String
         }
@@ -33,7 +34,7 @@ class AuthService{
         }
     }
     
-    var userEmail: String{
+    internal var userEmail: String{
         get{
             return defaults.object(forKey: USER_EMAIL_KEY) as! String
         }
@@ -43,19 +44,14 @@ class AuthService{
     }
     
     func registerUser(email: String, password: String, completion: @escaping CompletionHandler){
-        
-        let lowerCaseEmail = email.lowercased()
-        
-        let header = [
-            "Content-Type": "application/json; charset=utf-8"
-        ]
+        let lowerCaseEmail = email.lowercased()                
         
         let body: [String: Any] = [
             "email": lowerCaseEmail,
             "password": password
         ]
         
-        Alamofire.request(REGISTER_URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseString { response in
+        Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseString { response in
             if response.result.error == nil{
                 completion(true)
             }else{
@@ -63,5 +59,63 @@ class AuthService{
                 debugPrint(response.result.error as Any)
             }
         }
+    }
+    
+    func loginUser(email: String, password: String, completion: @escaping CompletionHandler){
+        let lowerCaseEmail = email.lowercased()
+        
+        let body: [String: Any] = [
+            "email": lowerCaseEmail,
+            "password": password
+        ]
+        
+        Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in
+            if response.result.error == nil{
+                guard let data = response.data else { return }
+                guard let json = try? JSON(data: data) else { return }
+                self.userEmail = json["email"].stringValue
+                self.authToken = json["token"].stringValue
+                self.isLoggedIn = true                
+                completion(true)
+            }else{
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+    }
+    
+    func createUser(name: String, email: String, avatarName: String, avatarColor: String, completion: @escaping CompletionHandler){
+        let lowerCaseEmail = email.lowercased()
+        
+        let body: [String: Any] = [
+            "name": name,
+            "email": lowerCaseEmail,
+            "avatarName": avatarName,
+            "avatarColor": avatarColor
+        ]
+        
+        let header = [
+            "Authorization": "Bearer \(AuthService.instance.authToken)",
+            "Content-Type": "application/json; charset=utf-8"
+        ]
+        
+        Alamofire.request(URL_USR_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+            if response.result.error == nil{
+                guard let data = response.data else {return}
+                guard let json = try? JSON(data: data) else {return}
+                UserDataService.instance.setUserData(
+                    id: json["_id"].stringValue,
+                    color: json["avatarColor"].stringValue,
+                    avatarName: json["avatarName"].stringValue,
+                    email: json["email"].stringValue,
+                    name: json["name"].stringValue)
+                completion(true)
+            }else{
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+
+        
     }
 }
