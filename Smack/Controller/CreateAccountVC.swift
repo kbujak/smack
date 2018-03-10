@@ -13,13 +13,21 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var usernameTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passTxt: UITextField!
-    @IBOutlet weak var userImg: UIButton!
+    @IBOutlet weak var UsrImage: UIImageView!
+    
     
     var avatarName = "profileDefault"
     var avatarColor = "[0.5, 0.5, 0.5, 1]"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDataService.instance.avatarName != "" {
+            UsrImage.image = UIImage(named: UserDataService.instance.avatarName)
+            avatarName = UserDataService.instance.avatarName
+        }
     }
     
     @IBAction func createAccountButtonPressed(_ sender: Any) {
@@ -45,6 +53,7 @@ class CreateAccountVC: UIViewController {
     }
     
     @IBAction func pickAvatarButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: TO_AVATAR_PICKER, sender: self)
     }
     
     @IBAction func pickBackgroundColorBtnPressed(_ sender: Any) {
