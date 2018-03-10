@@ -6,7 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Smack/Services/AuthService.swift"
@@ -19,14 +19,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Smack.AuthService.createUser(name: Swift.String, email: Swift.String, avatarName: Swift.String, avatarColor: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
                   moduleName = "Smack"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Booyac/Developer/Smack/Smack/Smack/Services/AuthService.swift"
-                  timestampString = "542385006.660563"
+                  timestampString = "542392654.501406"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "102"
@@ -34,14 +34,14 @@
                   offsetFromSymbolStart = "1530">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Smack.AuthService.createUser(name: Swift.String, email: Swift.String, avatarName: Swift.String, avatarColor: Swift.String, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
                   moduleName = "Smack"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Booyac/Developer/Smack/Smack/Smack/Services/AuthService.swift"
-                  timestampString = "542385006.663857"
+                  timestampString = "542392654.503854"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "103"
