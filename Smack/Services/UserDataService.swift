@@ -29,4 +29,40 @@ class UserDataService{
     func setAvatarName(avatarName: String){
         self.avatarName = avatarName
     }
+    
+    func returnBackgroundColor(from components: String) -> UIColor{
+        let scanner = Scanner(string: components)
+        let comma = CharacterSet(charactersIn: ",")
+        scanner.charactersToBeSkipped = CharacterSet(charactersIn: "[], ")
+        
+        var r, g, b, a: NSString?
+        
+        scanner.scanUpToCharacters(from: comma, into: &r)
+        scanner.scanUpToCharacters(from: comma, into: &g)
+        scanner.scanUpToCharacters(from: comma, into: &b)
+        scanner.scanUpToCharacters(from: comma, into: &a)
+        
+        guard let rUnwrapped = r else { return UIColor.lightGray }
+        guard let gUnwrapped = g else { return UIColor.lightGray }
+        guard let bUnwrapped = b else { return UIColor.lightGray }
+        guard let aUnwrapped = a else { return UIColor.lightGray }
+        
+        let rFloat = CGFloat(rUnwrapped.doubleValue)
+        let gFloat = CGFloat(gUnwrapped.doubleValue)
+        let bFloat = CGFloat(bUnwrapped.doubleValue)
+        let aFloat = CGFloat(aUnwrapped.doubleValue)
+        
+        return UIColor(red: rFloat, green: gFloat, blue: bFloat, alpha: aFloat)
+    }
+    
+    func logoutUser(){
+        id = ""
+        avatarName = ""
+        avatarColor = ""
+        email = ""
+        name = ""
+        AuthService.instance.isLoggedIn = false
+        AuthService.instance.authToken = ""
+        AuthService.instance.userEmail = ""
+    }
 }
