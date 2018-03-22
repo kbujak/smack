@@ -15,6 +15,8 @@ let BASE_URL = "https://booyacchatv2.herokuapp.com/v1/"
 let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_USR_ADD = "\(BASE_URL)user/add"
+let URL_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
+let URL_GET_CHANNELS = "\(BASE_URL)channel"
 
 // Segue identifiers
 let TO_LOGIN = "toLogin"
@@ -35,6 +37,10 @@ let USER_EMAIL_KEY = "userEmail"
 
 //Headers
 let HEADER = [
+    "Content-Type": "application/json; charset=utf-8"
+]
+let BEARER_HEADER = [
+    "Authorization": "Bearer \(AuthService.instance.authToken)",
     "Content-Type": "application/json; charset=utf-8"
 ]
 
